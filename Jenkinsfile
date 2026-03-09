@@ -7,6 +7,7 @@ pipeline {
 
     options {
         timestamps()
+    }
 
     environment {
         IMAGE_NAME = 'week7-calculator'
