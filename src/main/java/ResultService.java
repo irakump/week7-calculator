@@ -17,12 +17,12 @@ public class ResultService {
 
     private static String getDatabaseHost() {
         String host = System.getenv("DB_HOST");
-        if (host == null || host.isEmpty()) host = "db"; // use Docker service name
+        if (host == null || host.isEmpty()) host = "localhost"; // use Docker service name
         return host;
     }
 
     private static String getDatabaseUrl() {
-        return "jdbc:mariadb://" + getDatabaseHost() + ":3306/" + DB_NAME +
+        return "jdbc:mariadb://" + getDatabaseHost() + ":3307/" + DB_NAME +
                 "?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
     }
 
