@@ -5,6 +5,9 @@ pipeline {
         maven 'Maven 3.9.12'
     }
 
+    options {
+        timestamps()
+
     environment {
         IMAGE_NAME = 'week7-calculator'
         TAG = 'latest'
