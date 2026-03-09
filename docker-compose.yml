@@ -16,11 +16,10 @@ services:
       - db_data:/var/lib/mysql
 
   app:
-    # image is my own account for the exercise you have to change to your account
     #IMPORTANT docker build -t yourname/sum-product-fx .
     # docker push yourname/sum-product-fx: last
-    # then you can change the image in the following statment
-    image: amirdirin/sum-product_fx:latest
+    # then you can change the image in the following statement
+    image: irakump/week7-calculator:latest
     container_name: calculator-app
     depends_on:
       - db
